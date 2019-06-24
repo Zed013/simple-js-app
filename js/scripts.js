@@ -1,4 +1,3 @@
-< button onclick = "alert('You clicked the button!')" >
-    Click me!
-    <
-    /button>
+<script>
+  alert (Hello world);
+</script>
