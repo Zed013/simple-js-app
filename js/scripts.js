@@ -1,2 +1,3 @@
-var myName = 'Bob';
-document.write(myName);
+<script>
+  alert('Hello world');
+</script>
