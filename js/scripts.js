@@ -1,41 +1,49 @@
 
 var repository = [
-   [
-   'Bulbasaur', 
-   '2', 
-   'grass, poison'
-   ],
-   [
-   'Ivysaur', 
-   '3', 
-   'grass, poison'
-   ],
-   [
-   'Venusaur',
-   '6', 
-   'grass, poison'
-   ],
-   [
-   'Charmander', 
-   '2', 
-   'fire'
-   ],
-   [
-   'Charmeleon', 
-   '3', 
-   'fire'
-   ],
-   [ 
-   'Charizard', 
-   '5', 
-   'fire, flying'
-   ]
-]   ;
+   {
+   name: 'bulbasaur',
+   size: '2',
+   type: ['grass', 'poison']
+   },
 
-for (var i = 0; i < repository.length; i++) {
-   if (repository[i][1] > 5) {
-     document.write ('<p>Wow! Biggest Pokemon</p>');
+   {
+   name: 'Ivysaur',
+   size: '3',
+   type: ['grass', 'poison']
+   },
+
+   {
+   name: 'Venusaur',
+   size: '6',
+   type: ['grass', 'poison']
+   },
+
+   {
+   name: 'Charmander',
+   size: '2',
+   type: ['fire']
+   },
+
+   {
+   name: 'Charmeleon',
+   size: '2',
+   type: ['fire']
+   },
+
+   {
+   name: 'Charizdard',
+   size: '5',
+   type: ['fire', 'flying']
    }
- 
-   document.write ('<h2>' + repository[i][0] + '</h2>');
-} 
+];
+
+
+repository.forEach(function(repository) {
+   for(var prop in repository){
+      document.write (repository[prop] + '"' + '<br>')
+   }
+    if (repository.size > 5) {
+        document.write ('<p>Wow! Biggest Pokemon</p>');
+      };
+   });
+     
